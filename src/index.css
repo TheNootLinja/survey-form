@@ -1,7 +1,15 @@
 :root {
   /* Color Variables */
   --black: #1b2d45;
+  --lightGray: #b0b0b0;
+  --paleYellow: #ffe9a1;
 
   /* Intention Variables */
   --text-color: var(--black);
+  --bodyBG: var(--paleYellow);
+  --borderColor: var(--lightGray);
+}
+
+body {
+  background-color: var(--bodyBG);
 }

@@ -1,0 +1,21 @@
+.input-group {
+  margin: 0.5rem auto;
+}
+
+input {
+  width: 80%;
+  padding: 10px 20px;
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+}
+
+textarea {
+  width: 90%;
+  height: 300px;
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+}
