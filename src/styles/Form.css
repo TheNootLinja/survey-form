@@ -12,10 +12,15 @@ input {
 }
 
 textarea {
-  width: 90%;
+  width: 87%;
   height: 300px;
   display: block;
   margin: auto;
   border-radius: 5px;
   border: 1px solid var(--borderColor);
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
 }

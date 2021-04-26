@@ -18,14 +18,14 @@ function Form() {
         console.log(comment);
     };
     return (
-        <>
+        <form>
             <Input name='fname' label='First Name' type='text' phText='Whats your first name?'/>
             <Input name='lname' label='Last Name' type='text' phText='Whats your last name?'/>
             <Input name='email' label='Email' type='text' phText='Whats your first email?'/>
             <Input name='comment' label='Comment' type='textarea' phText='What did you think of the service?' changeHandler={handleChange}/>
             <Button btext='submit' clickHandler={handleClick}/>
             <p>{comment}</p>
-        </>
+        </form>
     )
 }
 
