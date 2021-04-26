@@ -12,4 +12,6 @@
 
 body {
   background-color: var(--bodyBG);
+  padding: 0;
+  margin: 0;
 }
