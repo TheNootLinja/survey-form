@@ -63,14 +63,29 @@ function Form() {
             phText='Whats your first email?'
             changeHandler={emailChange}
             />
-            <label htmlFor="service-used">Service Used</label>
-            <select name="service-used" id="dropdown" onChange={serviceChange}>
+            <div className="select-group">
+                <label htmlFor="service-used">Service Used</label>
+            </div>
+            <select name="service-used" id="dropdown" value='Select Service' onChange={serviceChange}>
+                <option className="place-holder" value="" hidden>Select Service</option>
                 <option value="New Vehicle Sale">New Vehicle Sale</option>
                 <option value="Used Vehicle Sale">Used Vehicle Sale</option>
                 <option value="Vehicle Trade-In">Vehicle Trade-In</option>
                 <option value="Vehicle Refinance">Vehicle Refinance</option>
             </select>
-
+            <div className='left-align'>
+                <label htmlFor="">Would you recommend us to a friend?</label>
+            </div>
+            <div className='radio-group'>
+                <div className='indiv-radio-group'>
+                    <input type='radio' id='yes' name='recommend' value='yes'/>
+                    <label htmlFor='yes'>Yes</label>
+                </div>
+                <div className='indiv-radio-group'>
+                    <input type='radio' id='no' name='recommend' value='no'/>
+                    <label htmlFor='no'>No</label>
+                </div>
+            </div>
             <Input 
             name='comment' 
             label='Comment' 
