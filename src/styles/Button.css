@@ -6,4 +6,5 @@ button {
   text-transform: uppercase;
   background-color: #42a4f5;
   color: white;
+  border: 1px solid var(--borderColor);
 }

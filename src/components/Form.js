@@ -74,7 +74,7 @@ function Form() {
             <div className="select-group">
                 <label htmlFor="service-used">Service Used</label>
             </div>
-            <select name="service-used" id="dropdown" onChange={serviceChange}>
+            <select name="service-used" id="dropdown" onChange={serviceChange} className='box-shadow'>
                 <option value="" hidden>Select Service</option>
                 <option value="New Vehicle Sale">New Vehicle Sale</option>
                 <option value="Used Vehicle Sale">Used Vehicle Sale</option>
@@ -84,7 +84,7 @@ function Form() {
             <div className='left-align'>
                 <label htmlFor="">Would you recommend us to a friend?</label>
             </div>
-            <div className='radio-group'>
+            <div className='radio-group box-shadow'>
                 <div className='indiv-radio-group'>
                     <input type='radio' id='yes' name='recommend' value='yes'onChange={recommendChange}/>
                     <label htmlFor='yes'>Yes</label>
