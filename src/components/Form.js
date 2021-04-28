@@ -12,15 +12,20 @@ function Form() {
     const [fName, setFName] = useState('');
     const [lName, setLName] = useState('');
     const [email, setEmail] = useState('');
-    const [comment, setComment] = useState('');
     const [service, setService] = useState('');
+    const [recommend, setRecommend] = useState('');
+    const [comment, setComment] = useState('');
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(fName === '' || lName === '' || email === '' || service === '' || recommend === '' || comment === '') {
+                alert("Please fill out form before submitting")
+            };
         const formStateObject = {
             fName,
             lName,
             email,
             service,
+            recommend,
             comment,
         }
         console.log(formStateObject);
@@ -37,6 +42,9 @@ function Form() {
     const serviceChange  = (e) => {
         setService(e.target.value);
     };
+    const recommendChange = (e) => {
+        setRecommend(e.target.value);
+    }
     const commentChange = (e) => {
         setComment(e.target.value);
     };
@@ -66,8 +74,8 @@ function Form() {
             <div className="select-group">
                 <label htmlFor="service-used">Service Used</label>
             </div>
-            <select name="service-used" id="dropdown" value='Select Service' onChange={serviceChange}>
-                <option className="place-holder" value="" hidden>Select Service</option>
+            <select name="service-used" id="dropdown" onChange={serviceChange}>
+                <option value="" hidden>Select Service</option>
                 <option value="New Vehicle Sale">New Vehicle Sale</option>
                 <option value="Used Vehicle Sale">Used Vehicle Sale</option>
                 <option value="Vehicle Trade-In">Vehicle Trade-In</option>
@@ -78,11 +86,11 @@ function Form() {
             </div>
             <div className='radio-group'>
                 <div className='indiv-radio-group'>
-                    <input type='radio' id='yes' name='recommend' value='yes'/>
+                    <input type='radio' id='yes' name='recommend' value='yes'onChange={recommendChange}/>
                     <label htmlFor='yes'>Yes</label>
                 </div>
                 <div className='indiv-radio-group'>
-                    <input type='radio' id='no' name='recommend' value='no'/>
+                    <input type='radio' id='no' name='recommend' value='no'onChange={recommendChange}/>
                     <label htmlFor='no'>No</label>
                 </div>
             </div>
