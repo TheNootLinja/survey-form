@@ -5,7 +5,7 @@ import Button from './Button';
 import Input from './Input';
 
 
-function Form() {
+function Form({onSubmit}) {
     // TODO: Change over state below to using a reducer so that we can
     // TODO: have a single state and hook so we don't have to have a
     // TODO: separate set function for each.
@@ -29,6 +29,7 @@ function Form() {
             comment,
         }
         console.log(formStateObject);
+        onSubmit();
     }
     const fNameChange = (e) => {
         setFName(e.target.value);

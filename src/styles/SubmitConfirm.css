@@ -1,0 +1,10 @@
+.submit-confirm {
+  max-width: 500px;
+  margin: auto;
+}
+
+.submit-confirm h2 {
+  font-size: 5rem;
+  margin-top: 5rem;
+  font-family: 'Antonio', sans-serif;
+}
