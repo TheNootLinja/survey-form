@@ -23,7 +23,7 @@
 
 .radio-group input {
   display: inline;
-  margin: 0;
+  margin-left: 15px;
   width: 2rem;
 }
 
@@ -59,6 +59,7 @@ select {
 
 label {
   margin-left: 30px;
+  font-family: 'Antonio', sans-serif;
 }
 
 form {
