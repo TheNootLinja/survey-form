@@ -19,7 +19,8 @@ function Form({onSubmit}) {
         e.preventDefault();
         if(fName === '' || lName === '' || email === '' || service === '' || recommend === '' || comment === '') {
                 alert("Please fill out form before submitting")
-            };
+            }
+            else {
         const formStateObject = {
             fName,
             lName,
@@ -28,8 +29,9 @@ function Form({onSubmit}) {
             recommend,
             comment,
         }
-        console.log(formStateObject);
-        onSubmit();
+            console.log(formStateObject);
+            onSubmit();
+        }
     }
     const fNameChange = (e) => {
         setFName(e.target.value);
