@@ -12,6 +12,8 @@ function App() {
   }
   return <div className="App">
     <Header />
+    {/* TODO: Want to add an animation to the transition when 
+    hiding the Form showing the SubmitConfirm component */}
     {!submitted ? <Form onSubmit={showSubmit}/> : <SubmitConfirm />}
   </div>;
 }
