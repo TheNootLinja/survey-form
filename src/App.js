@@ -6,6 +6,7 @@ import SubmitConfirm from './components/SubmitConfirm'
 
 function App() {
   const [submitted, setSubmitted] = useState(false);
+  const entered = true;
   const showSubmit = () => {
     console.log('SHOWING SUBMITTED!')
     setSubmitted(true);
@@ -14,7 +15,7 @@ function App() {
     <Header />
     {/* TODO: Want to add an animation to the transition when 
     hiding the Form showing the SubmitConfirm component */}
-    {!submitted ? <Form onSubmit={showSubmit}/> : <SubmitConfirm />}
+    {!submitted ? <Form onSubmit={showSubmit}/> : <SubmitConfirm in={entered}/>}
   </div>;
 }
 
