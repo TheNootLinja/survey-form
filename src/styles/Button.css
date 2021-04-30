@@ -1,9 +1,19 @@
 button {
-  /* margin-top: 1rem; */
+  margin: auto;
+  margin-top: 1rem;
   height: 40px;
-  width: 95%;
+  width: 90%;
   border-radius: 5px;
   text-transform: uppercase;
   background-color: #42a4f5;
   color: white;
+  border: 1px solid var(--borderColor);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  margin-top: 0.8rem;
+  background-color: rgb(0, 238, 127);
+  transition: all 0.2s ease-in-out;
 }

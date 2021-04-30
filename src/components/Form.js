@@ -5,7 +5,7 @@ import Button from './Button';
 import Input from './Input';
 
 
-function Form() {
+function Form({onSubmit}) {
     // TODO: Change over state below to using a reducer so that we can
     // TODO: have a single state and hook so we don't have to have a
     // TODO: separate set function for each.
@@ -19,7 +19,8 @@ function Form() {
         e.preventDefault();
         if(fName === '' || lName === '' || email === '' || service === '' || recommend === '' || comment === '') {
                 alert("Please fill out form before submitting")
-            };
+            }
+            else {
         const formStateObject = {
             fName,
             lName,
@@ -28,7 +29,9 @@ function Form() {
             recommend,
             comment,
         }
-        console.log(formStateObject);
+            console.log(formStateObject);
+            onSubmit();
+        }
     }
     const fNameChange = (e) => {
         setFName(e.target.value);
@@ -74,7 +77,7 @@ function Form() {
             <div className="select-group">
                 <label htmlFor="service-used">Service Used</label>
             </div>
-            <select name="service-used" id="dropdown" onChange={serviceChange}>
+            <select name="service-used" id="dropdown" onChange={serviceChange} className='box-shadow'>
                 <option value="" hidden>Select Service</option>
                 <option value="New Vehicle Sale">New Vehicle Sale</option>
                 <option value="Used Vehicle Sale">Used Vehicle Sale</option>
@@ -84,7 +87,7 @@ function Form() {
             <div className='left-align'>
                 <label htmlFor="">Would you recommend us to a friend?</label>
             </div>
-            <div className='radio-group'>
+            <div className='radio-group box-shadow'>
                 <div className='indiv-radio-group'>
                     <input type='radio' id='yes' name='recommend' value='yes'onChange={recommendChange}/>
                     <label htmlFor='yes'>Yes</label>
